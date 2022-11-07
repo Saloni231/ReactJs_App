@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import _ from './MyStyle.css'
+import './MyStyle.css'
 
 const browser = [
   {value: 'Chrome'},
