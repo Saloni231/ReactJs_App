@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import _ from './MyStyle.css'
 
 const browser = [
   {value: 'Chrome'},
@@ -19,7 +20,7 @@ class Conditional extends Component {
   }
   browserChange (e) {
     this.setState({browser: e.target.value})
-    if (e.target.value != 'Chrome') {
+    if (e.target.value !== 'Chrome') {
       this.setState({message: "Please use Chrome"})
     }
     else{
@@ -28,7 +29,7 @@ class Conditional extends Component {
   }
   render() {
     return (
-      <div>
+      <div className= 'primary'>
         <p className = 'fileName'>conditional.js</p>
         <p>{this.state.message}</p>
         Choose Your Browser : <select value = {this.state.browser} onChange = {this.browserChange}>

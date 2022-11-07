@@ -6,7 +6,8 @@ function Logo(props) {
     <div>
         <p className='fileName'>Logo.js</p>
         <img src = {logo} className = "App-logo" alt = {props.alt}></img>
-        <p>Name : <input type={"text"} onChange = {(event) => props.eventHandler(event.target.value)}></input>
+        <p>
+          Name : <input type={"text"} onChange = {(event) => props.eventHandler(event.target.value)}></input>
         </p>
     </div>
   )

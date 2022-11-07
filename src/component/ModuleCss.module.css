@@ -1,0 +1,21 @@
+.secondary{
+    border: 2px solid deeppink;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    background-color: blanchedalmond;
+    color: tomato;
+}
+@media screen {
+    .secondary {
+        animation: rotate 1 5s linear;
+    }
+}
+
+@keyframes rotate {
+    from {
+      transform: scale(0.1);
+    }
+    to {
+      transform: scale(1);
+    }
+  }

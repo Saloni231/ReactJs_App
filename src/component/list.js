@@ -6,17 +6,17 @@ class List extends Component {
     
       this.state = {
         number : 0,
-        numbers : []
+        numbers : [],
       }
     }
     changeN(n) {
         this.setState({number : n})
     }
     addAtStartElement = (event) => {
-        this.setState({numbers : [this.state.number].concat(this.state.numbers)})
+      this.setState({numbers : [this.state.number].concat(this.state.numbers), txtColor: 'green'})
     }
     addAtEndElement = (event) => {
-        this.setState({numbers : this.state.numbers.concat(this.state.number)})
+      this.setState({numbers : this.state.numbers.concat(this.state.number), txtColor: 'red'})
     }
   render() {
     return (
@@ -25,7 +25,9 @@ class List extends Component {
         <input type = {'text'} onChange = {(event) => this.changeN(event.target.value)}></input>
         <br/><button onClick = {this.addAtStartElement}>ADD AT START</button>
         <br/><button onClick = {this.addAtEndElement}>ADD AT END</button>
-        {this.state.numbers.map((num, index) => <li key = {index}>{index}:{num}</li>)}
+        {this.state.numbers.map((num, index) => <li key = {index} style = {{fontSize : "20px", color: 'greenyellow'}}>
+            {index} : {num}
+        </li>)}
       </div>
     )
   }
