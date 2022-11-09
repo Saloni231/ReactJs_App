@@ -17,7 +17,38 @@ class Conditional extends Component {
       message : ""
     }
     this.browserChange = this.browserChange.bind(this);
+
+    console.log('Conditional.js constructor invoked');
   }
+
+  static getDerivedStateFromProps() {
+    console.log('Conditional.js get derived State From Props invoked');
+    return null;
+  }
+
+  componentDidMount() {
+    console.log('Conditional.js component did mount invoked');
+  }
+
+  shouldComponentUpdate(){
+    console.log('Conditional.js Should component update invoked');
+    return true;
+  }
+
+  getSnapshotBeforeUpdate() {
+    console.log('Conditional.js get snapshot before update invoked');
+    return true;
+  }
+
+  componentDidUpdate() {
+    console.log('Conditional.js component did update invoked');
+  }
+
+  componentWillUnmount(){
+    console.log('Conditional.js component will unmount invoked');
+  }
+
+
   browserChange (e) {
     this.setState({browser: e.target.value})
     if (e.target.value !== 'Chrome') {
@@ -28,6 +59,9 @@ class Conditional extends Component {
     }
   }
   render() {
+
+    console.log('Conditional.js render invoked');
+
     return (
       <div className= 'primary'>
         <p className = 'fileName'>conditional.js</p>

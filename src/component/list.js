@@ -8,7 +8,37 @@ class List extends Component {
         number : 0,
         numbers : [],
       }
+
+      console.log('List.js constructor invoked');
     }
+
+    static getDerivedStateFromProps() {
+      console.log('List.js get derived State From Props invoked');
+      return null;
+    }
+
+    componentDidMount() {
+      console.log('List.js component did mount invoked');
+    }
+
+    shouldComponentUpdate(){
+      console.log('List.js Should component update invoked');
+      return true;
+    }
+
+    getSnapshotBeforeUpdate() {
+      console.log('List.js get snapshot before update invoked');
+      return true;
+    }
+
+    componentDidUpdate() {
+      console.log('List.js component did update invoked');
+    }
+
+    componentWillUnmount(){
+      console.log('List.js component will unmount invoked');
+    }
+
     changeN(n) {
         this.setState({number : n})
     }
@@ -19,6 +49,9 @@ class List extends Component {
       this.setState({numbers : this.state.numbers.concat(this.state.number), txtColor: 'red'})
     }
   render() {
+
+    console.log('List.js render invoked');
+
     return (
       <div>
         <p className='fileName'>list.js</p>
